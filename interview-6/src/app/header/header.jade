@@ -1,0 +1,11 @@
+nav.navbar.navbar-default(ng-controller="HeaderCtrl")
+  a.navbar-brand.pull-left(href="/#/") Interview App
+  ul.nav.navbar-nav.navbar-right
+    li(
+      ng-repeat="item in menu"
+      ng-class="{ 'active': isActive(item.href) }"
+    )
+      a(
+        ng-href="/#/{{ item.href }}"
+        ng-bind="item.title"
+      )

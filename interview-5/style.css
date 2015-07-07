@@ -1,0 +1,65 @@
+.post {
+  width: 500px;
+  position: relative;
+  padding: 20px;
+}
+.post-header {
+  color: #008000;
+  font-family: 'Russo One', sans-serif;
+}
+.post-content {
+  color: #0c0;
+}
+.post-info {
+  margin-top: 20px;
+}
+.post-date,
+.post-author {
+  display: inline-block;
+}
+.post-date {
+  width: 20%;
+  color: #558000;
+}
+.post-author {
+  width: 79%;
+  text-align: right;
+  color: #265a26;
+}
+.post-tags {
+  margin-top: 10px;
+  color: #9f9;
+}
+.post {
+  border: 2px solid;
+  border-color: #008000 #f00 #00f #ff0;
+}
+.post:before,
+.post:after,
+.post-content:before,
+.post-content:after {
+  content: ' ';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.post:before {
+  left: 0;
+  top: 0;
+  background-color: #008000;
+}
+.post:after {
+  right: 0;
+  top: 0;
+  background-color: #f00;
+}
+.post-content:before {
+  left: 0;
+  bottom: 0;
+  background-color: #ff0;
+}
+.post-content:after {
+  right: 0;
+  bottom: 0;
+  background-color: #00f;
+}

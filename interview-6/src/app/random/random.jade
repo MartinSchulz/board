@@ -1,0 +1,23 @@
+
+.row
+  .col-md-6
+    h1 Random number generator
+    .input-group
+      input.form-control(
+        disabled
+        ng-model="number"
+      )
+      span.input-group-btn
+        button.btn.btn-default(
+          ng-click="generate()"
+        ) Generate
+      
+          
+  .col-md-6
+    h4.memo-header(ng-if="memo.length") Your previous {{ memo.length > 10 ? 10 : memo.length }} random numbers
+    ul.list-group
+      li.list-group-item(
+        ng-repeat="item in memo | limitTo : 10 track by $index"
+        ng-bind="item"
+      )
+          

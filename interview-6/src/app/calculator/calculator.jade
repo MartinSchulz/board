@@ -1,0 +1,43 @@
+h1 Calculator
+
+.row
+  p.alert.alert-danger(
+    ng-style="{ 'opacity': isError ? 1 : 0 }"
+  ) wrong exrpession
+  .col-md-6
+    .calculator-wrap
+      .calculator-top
+        
+        input.form-control(
+          ng-model="expression"
+          ng-click="test($event)"
+          editable-input
+          put="put"
+          ng-class="{ 'input-error': isError }"
+        )
+      .calculator-body.row
+        .col-md-9.calculator-numeric
+          button.btn.btn-default(
+            ng-repeat="item in numericPad"
+            ng-bind="item"
+            ng-click="performAction(item)"
+          )
+          
+        .col-md-3.calculator-actions
+          button.btn.btn-info(
+            ng-repeat="item in actionsPad"
+            ng-bind="item"
+            ng-click="performAction(item)"
+          )
+          
+  .col-md-6.memo
+    h4.calc-memo-header(ng-if="memo.length") Your previous {{ memo.length > 10 ? 10 : memo.length }} calculations
+    ul.list-group
+      li.list-group-item(
+        ng-repeat="item in memo | limitTo : 10 track by $index"
+        ng-bind="item"
+        ng-click="setExpression(item)"
+      )
+          
+        
+      

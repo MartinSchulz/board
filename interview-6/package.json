@@ -1,0 +1,15 @@
+{
+  "name": "interview-6",
+  "version": "0.1.0",
+
+  "devDependencies": {
+    "bower": "*",
+    "gulp": "*",
+    "gulp-jade": "*",
+    "gulp-uglify": "*",
+    "gulp-stylus": "*",
+    "gulp-concat": "*",
+    "connect": "*",
+    "serve-static": "*"
+  }
+}

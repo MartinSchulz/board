@@ -1,0 +1,71 @@
+$color-green = green;
+
+.post
+  width 500px;
+  position relative
+  padding 20px
+
+.post-header
+  color: $color-green;
+  font-family: 'Russo One', sans-serif;
+  
+.post-content
+  color: lighten($color-green, 20%);
+  
+.post-info
+  margin-top 20px
+  
+.post-date,
+.post-author
+  display inline-block
+  
+.post-date
+  width 20%;
+  color: hue($color-green, 80deg);
+  
+.post-author
+  width: 79%
+  text-align right
+  color: saturation($color-green, 40%);
+  
+.post-tags
+  margin-top 10px
+  color: lightness($color-green, 80%)
+
+
+
+  
+ // frame with corners
+
+.post
+  border: 2px solid;
+  border-color: green red blue yellow;
+ 
+.post:before,
+.post:after,
+.post-content:before,
+.post-content:after
+  content: ' '
+  position absolute
+  width 10px
+  height 10px
+  
+.post:before
+  left: 0
+  top: 0
+  background-color green
+  
+.post:after
+  right: 0
+  top: 0
+  background-color red
+  
+.post-content:before
+  left: 0
+  bottom: 0
+  background-color yellow
+  
+.post-content:after
+  right: 0
+  bottom: 0
+  background-color blue

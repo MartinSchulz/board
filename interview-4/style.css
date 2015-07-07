@@ -1,0 +1,41 @@
+.super-menu {
+
+}
+
+.super-menu > li {
+  display: inline-block;
+  width: 100px;
+  background-color: #ccc;
+  border-right: 1px solid #777;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.super-menu ul {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+.super-menu li:hover ul {
+  opacity: 1;
+  display: block;
+  transition: all 1s ease;
+  -webkit-animation: display-transition 1s;
+}
+
+@-webkit-keyframes display-transition {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
